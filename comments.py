@@ -1,11 +1,10 @@
 action = input("Enter Action: ")
 
-comments = [
+comments = {}
     
-]
 
 data = {
-    'user' : {'username' : 'Ian',
+    'username' : {'username' : 'Ian',
                     'password' : '1234',
                     'user_id' : 1
                     }
@@ -13,14 +12,14 @@ data = {
 
 username = input("Enter username: ")
 if action =="3":
-    for username in data['user']:
+    for username in data['username']:
         comment = input("Enter Comment: ")
 
-        comment_data = {
+        comments[len(comments)] = {
             'id' : len(comments)+1,
             'comment' : comment,
-            'username' : data['user']['username']
+            'username' : data['username']['username']
         }
-        comments.append(comment_data)
+        
 
         print(comments)
