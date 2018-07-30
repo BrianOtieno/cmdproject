@@ -10,4 +10,4 @@ Users can log in and out, and we track when they last logged in
 
 ## Comments:
 Comments are simply a message, a timestamp, and the author.
-Comments can also be a reply, so we'll store what the parent comment was.
+Comments can also be a reply
