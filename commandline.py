@@ -1,7 +1,7 @@
 import re
 
-data = {}
-Comments = {"id": 1, "comment": "Some comment"}
+
+comments = {"id": 1, "comment": "Some comment"}
 
 print("==> Select Action To Continue")
 print("1: Create User 2: Login 3: Add Comments 4: Edit Comments 5:\
@@ -43,9 +43,11 @@ if action == 5:
     comment_id = raw_input("Enter Comment ID: ")
 
     if not username or not comment_id:
-        print("Both username and password are required")
-    if Comments:
-        if data[username]['username'] == username:
-            data.pop(Comments['id'], None)
-            print("Comment Deleted Successfully!")
-        print("An error occured! Check if ID exists.")
+        print("Both username and comment are required")
+
+    if comments:
+        comments.pop(comment_id, None)
+        print("Comment Deleted Successfully!")
+        print(comments)
+    print("An error occured! Check if ID exists.")
+    print(comments)
